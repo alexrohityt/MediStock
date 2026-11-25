@@ -1,0 +1,46 @@
+# MediStock Testing Checklist
+
+- [ ] Customer registration rejects duplicate and invalid data
+- [ ] Pharmacy registration returns pending verification status
+- [ ] Invalid login is rejected
+- [ ] Valid customer, pharmacy and admin login returns role-specific JWT
+- [ ] Private routes reject missing or invalid tokens
+- [ ] Customer cannot access pharmacy/admin APIs
+- [ ] Pharmacy cannot access another pharmacy's inventory
+- [ ] Admin can approve and reject pharmacies
+- [ ] Medicine search supports partial, case-insensitive names
+- [ ] Generic and brand searches return matching medicines
+- [ ] Pending/rejected pharmacies are excluded
+- [ ] Expired and zero-stock inventory is excluded
+- [ ] Price, nearest and stock sorting works
+- [ ] Nearest search puts pharmacies in ascending distance order and unlocated results last
+- [ ] Browser geolocation denial does not break search
+- [ ] Customer delivery order validates address, available batch quantity and required prescription
+- [ ] Prescription uploads reject unsupported types and files larger than 5 MB
+- [ ] Prescription downloads are private to the ordering customer and assigned pharmacy
+- [ ] Delivery request moves through accepted, preparing, out-for-delivery and delivered
+- [ ] Delivery marks the selected stock batch fulfilled only once
+- [ ] Customer sees delivery status, destination, pharmacy and medicine total
+- [ ] Negative inventory quantity is rejected
+- [ ] Pharmacy can create, edit and delete its own inventory listings
+- [ ] Pharmacy can configure a low-stock threshold
+- [ ] Dashboard summary reports low stock, near-expiry, expired stock and request totals
+- [ ] Pharmacy profile updates address, coordinates and opening hours
+- [ ] Pharmacy request status filters and print report work
+- [ ] Supplier records are private to the owning pharmacy
+- [ ] Purchase order receipt adds a batch and is safe to retry with the same receipt ID
+- [ ] Counter sale rejects expired batches and stock shortages
+- [ ] Retrying a sale with the same idempotency key does not deduct stock twice
+- [ ] Prescription workflow only permits valid status transitions
+- [ ] Prescription workflow data is inaccessible to other pharmacies/customers
+- [ ] Staff permissions are enforced server-side for each module
+- [ ] Suspended staff accounts cannot sign in
+- [ ] Duplicate batch for one pharmacy/medicine is rejected while a different batch is allowed
+- [ ] Customer can create and cancel own request
+- [ ] Customer cannot cancel fulfilled/rejected request
+- [ ] Pharmacy can accept/reject/fulfill its own requests
+- [ ] Fulfillment atomically prevents stock below zero
+- [ ] Notifications are created and user-specific
+- [ ] Suspended accounts cannot authenticate
+- [ ] Frontend routes redirect unauthenticated users
+- [ ] Mobile navigation and layouts remain usable
