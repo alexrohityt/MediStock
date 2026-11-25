@@ -1,4 +1,5 @@
 # MediStock
+<<<<<<< HEAD
 
 MediStock is a full-stack MERN medicine availability platform for customers, registered pharmacies and administrators. It provides verified pharmacy inventory search, price comparison, availability requests, notifications and role-based administration.
 
@@ -150,3 +151,6 @@ Suggested verification:
 ## Security
 
 JWTs are required on private APIs. Passwords are bcrypt-hashed. Public inventory search excludes pending/rejected pharmacies, expired stock and zero quantity. Fulfillment uses a MongoDB transaction and atomic quantity decrement. Demo and real credentials must remain outside source control.
+=======
+Find the medicine nerar you
+>>>>>>> 00c5dcdc74089f5eb3c198be04535687edf61120
